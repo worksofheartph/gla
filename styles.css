@@ -249,3 +249,10 @@ header > nav > a:hover {
   text-transform: uppercase;
   letter-spacing: 0.8;
 }
+
+footer {
+  padding: 3rem 0;
+  text-align: center;
+  background: var(--pink);
+  color: var(--white);
+}
