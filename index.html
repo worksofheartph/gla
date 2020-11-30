@@ -148,21 +148,20 @@
       </div>
     </div>
     <script>
-    var contact = document.querySelector("#contact");
-    var mobileMenu = document.querySelector("#menuToggle input");
-    
-    document.querySelector(".contact-toggle").addEventListener("click", function(e) {
-    e.preventDefault();
-    contact.classList.toggle("toggled");
-    window.scrollTo({top: 0, behavior: 'smooth'});
-    });
-    var mobileMenuToggled = false;
-    mobileMenu.addEventListener("click", toggleMobileMenu);
-    mobileMenu.addEventListener("tap", toggleMobileMenu);
-    function toggleMobileMenu(e) {
-    mobileMenuToggled = !mobileMenuToggled;
-    document.body.style.overflowY = mobileMenuToggled ? "hidden" : "auto";
-    }
+      var contact = document.querySelector("#contact");
+      var mobileMenu = document.querySelector("#menuToggle input");
+      
+      document.querySelector(".contact-toggle").addEventListener("click", function(e) {
+        e.preventDefault();
+        contact.classList.toggle("toggled");
+        window.scrollTo({top: 0, behavior: 'smooth'});
+      });
+
+      var mobileMenuToggled = false;
+      mobileMenu.addEventListener("click", function(e) {
+        mobileMenuToggled = !mobileMenuToggled;
+        document.body.style.overflowY = mobileMenuToggled ? "hidden" : "auto";
+      });
     </script>
   </body>
 </html>

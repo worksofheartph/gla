@@ -306,8 +306,13 @@
         mobileMenuToggled = !mobileMenuToggled;
         document.body.style.overflowY = mobileMenuToggled ? "hidden" : "auto";
       });
-
-
+    </script>
+    <script>
+      Array.from(document.querySelectorAll(".mobile-collapse")).forEach(function(el) {
+        el.addEventListener("click", function (e) {
+          el.classList.toggle("expanded");
+        });
+      });
     </script>
   </body>
 </html>
