@@ -770,6 +770,7 @@ select {
     border: 0px;
     border-radius: 12px;
     width: 100%;
+    margin-bottom: 1em;
 }
 
 label {
@@ -861,6 +862,15 @@ textarea {
 
   .about-hero, .enroll-hero, .sponsor-hero {
     padding: 2rem calc(100% * 4 / 48) 1rem;
+  }
+
+  .form-row {
+    display: block;
+  }
+
+  .form-row .col, .col-lg-8, .col-lg-4 {
+    width: 100%;
+    margin: 0;
   }
 
 }

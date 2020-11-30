@@ -75,7 +75,7 @@
           <img src="images/adopt-teacher.svg">
           <h2>Adopt-A-Teacher Program</h2>
           <p>Help equip and empower Filipino teachers for the next generation of Filipino students today! You can show support by sponsoring a class voucher.</p>
-          <a href="about.html" class="btn btn-pink-solid">VIEW VOUCHERS</a>
+          <a href="https://globallearningaccess.apptitude.xyz/help-educate/" class="btn btn-pink-solid">VIEW VOUCHERS</a>
         </div>
         <div class="sponsor-meta">
           By sponsoring a teacher, you will:
@@ -99,44 +99,42 @@
           <p>You can also help our Kababayan Teachers by donating an amount to GLA.</p>
         </div>
         <div class="sponsor-meta">
-          <form>
-            <div class="dragArea">
-              <div data-for="amount" class="col-lg-8 col-md-12 col-sm-12 form-group">
-                <label for="amount" class="form-control-label mbr-fonts-style display-7 is-bold">Select an amount</label><br/>
-                <select name="amount" data-form-field="select" required="required" class="form-control shadowed display-7" id="amount">
-                  <option value="100">PHP 100</option>
-                  <option value="500">PHP 500</option>
-                  <option value="1000">PHP 1,000</option>
-                  <option value="5000" selected="">PHP 5,000</option>
-                  <option value="10000">PHP 10,000</option>
+          <form id="donate-form">
+            <div>
+              <div data-for="amount" class="col-lg-8">
+                <label for="amount">Select an amount</label><br/>
+                <select name="amount" data-form-field="select" required="required" id="amount">
+                  <option value="425">$425 for 1 teacher </option>
+                  <option value="1275">$1,275 for 2 teachers</option>
+                  <option value="2125">$2,125 for 3 teachers</option>
                   <option value="other_amount">Other amount</option>
                 </select>
               </div>
-              <div class="col-lg-4 col-md-12 col-sm-12 form-group" data-for="other_amount">
-                <label for="other_amount" class="form-control-label mbr-fonts-style display-7 is-bold">Amount</label>
-                <input type="number" name="other_amount" placeholder="For other amounts only" max="" min="1" step="1" data-form-field="other_amount" class="form-control shadowed display-7" value="" id="other_amount" disabled="">
+              <div class="col-lg-4" data-for="other_amount">
+                <label for="other_amount">Amount</label>
+                <input type="number" name="other_amount" placeholder="For other amounts only" max="" min="1" step="1" data-form-field="other_amount" value="" id="other_amount" disabled="">
               </div>
-              <div class="col-lg-12 col-md-12 col-sm-12 form-group">
-                <label class="form-control-label mbr-fonts-style display-7 is-bold">Your name</label>
+              <div>
+                <label>Your name</label>
                 <div class="form-row">
                   <div class="col">
-                    <input type="text" name="first_name" placeholder="First Name" data-form-field="first_name" required="required" class="form-control text-multiple shadowed" value="" id="first_name">
+                    <input type="text" name="first_name" placeholder="First Name" data-form-field="first_name" required="required" value="" id="first_name">
                   </div>
 
                   <div class="col">
-                    <input type="text" name="last_name" placeholder="Last Name" data-form-field="last_name" required="required" class="form-control text-multiple shadowed" value="" id="last_name">
+                    <input type="text" name="last_name" placeholder="Last Name" data-form-field="last_name" required="required" value="" id="last_name">
                   </div>
                 </div>
               </div>
-              <div data-for="email" class="col-lg-12 col-md-12 col-sm-12 form-group">
-                <label for="email" class="form-control-label mbr-fonts-style display-7 is-bold">Email</label>
-                <input type="email" name="email" placeholder="juan@delacruz.com" data-form-field="email" required="required" class="form-control shadowed display-7" value="" id="email">
+              <div data-for="email">
+                <label for="email">Email</label>
+                <input type="email" name="email" placeholder="juan@delacruz.com" data-form-field="email" required="required" value="" id="email">
               </div>
-              <div class="col-lg-12 col-md-12 col-sm-12 form-group" data-for="textarea">
-                <label for="textarea" class="form-control-label mbr-fonts-style display-7 is-bold">Message</label>
-                <textarea name="textarea" placeholder="Optional message" data-form-field="textarea" rows="3" class="form-control shadowed display-7" id="message"></textarea>
+              <div data-for="textarea">
+                <label for="textarea">Message</label>
+                <textarea name="textarea" placeholder="Optional message" data-form-field="textarea" rows="3" id="message"></textarea>
               </div>
-              <div class="col-lg-12 col-md-12 col-sm-12">
+              <div>
                 <button type="submit" class="btn btn-pink-solid">DONATE</button>
               </div>
             </div>
@@ -248,6 +246,11 @@
         mobileMenuToggled = !mobileMenuToggled;
         document.body.style.overflowY = mobileMenuToggled ? "hidden" : "auto";
       }
+    </script>
+    <script>
+      document.querySelector("#amount").addEventListener("change", function(e) {
+          document.querySelector("#other_amount").disabled = e.target.value !== "other_amount";
+      });
     </script>
   </body>
 </html>
