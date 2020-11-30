@@ -153,7 +153,7 @@ h1 {
   padding: 10px 30px 10px 20px;
   color: var(--white);
   border: 1px solid var(--white);
-  border-radius: 10px;
+  border-radius: 12px;
   letter-spacing: 0.15em;
   text-align: left;
   display: inline-block;
@@ -248,7 +248,7 @@ nav .btn-enroll {
 
 .course {
   border: 2px solid var(--grey-light);
-  border-radius: 10px;
+  border-radius: 12px;
   overflow: hidden;
   width: calc(100% * 44 / 48 / 3);
   position: relative;
@@ -582,7 +582,7 @@ footer {
 
 .sponsor {
   border: 2px solid var(--grey-light);
-  border-radius: 10px;
+  border-radius: 12px;
   overflow: hidden;
   width: 100%;
   position: relative;
@@ -667,10 +667,8 @@ footer {
   width: 100%;
   transform-origin: 0% 0%;
   transform: translate(0, -100%);
-}
-
-#contact.loaded {
   transition: all 0.5s cubic-bezier(0.77, 0.2, 0.05, 1);
+  transition-property: transform, opacity;
 }
 
 #contact .container-small {
@@ -700,7 +698,7 @@ input, textarea {
   padding: 1em 0;
   text-indent: 1.5em;
   border: 0;
-  border-radius: 10px;
+  border-radius: 12px;
   width: 100%;
   margin-bottom: 1em;
   font: 15px/24px 'Mulish', sans-serif;
