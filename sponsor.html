@@ -217,11 +217,13 @@
     </div>
     <script>
     var contact = document.querySelector("#contact");
+    contact.classList.add("loaded");
     document.querySelector(".contact-toggle").addEventListener("click", function(e) {
     e.preventDefault();
     contact.classList.toggle("toggled");
         window.scrollTo({top: 0, behavior: 'smooth'});
     });
     </script>
+    <script> </script>
   </body>
 </html>
