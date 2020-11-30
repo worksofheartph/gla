@@ -632,8 +632,13 @@ footer {
   background: var(--grey-light);
   z-index: 9998;
   position: absolute;
-  top: -100vh;
+  opacity: 0;
+  left: 0;
+  top: 0;
   width: 100%;
+  transform-origin: 0% 0%;
+  transform: translate(0, -100%);
+  transition: all 0.5s cubic-bezier(0.77, 0.2, 0.05, 1);
 }
 
 #contact .container-small {
@@ -644,6 +649,11 @@ footer {
 
 #contact .container-small > * {
   width: 45%;
+}
+
+#contact.toggled {
+  transform: scale(1, 1) translate(0, 60px);
+  opacity: 1;
 }
 
 .contact-image {
