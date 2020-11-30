@@ -320,10 +320,12 @@
       });
 
       var mobileMenuToggled = false;
-      mobileMenu.addEventListener("click", function(e) {
+      mobileMenu.addEventListener("click", toggleMobileMenu);
+      mobileMenu.addEventListener("tap", toggleMobileMenu);
+      function toggleMobileMenu(e) {
         mobileMenuToggled = !mobileMenuToggled;
         document.body.style.overflowY = mobileMenuToggled ? "hidden" : "auto";
-      });
+      }
     </script>
     <script>
       Array.from(document.querySelectorAll(".mobile-collapse")).forEach(function(el) {
