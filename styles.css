@@ -601,6 +601,26 @@ footer {
   margin: 0 0 0 30px;
 }
 
+.col-lg-8 {
+    width: 62%;
+    margin-right: 4%;
+    display: inline-block;
+}
+
+.col-lg-4 {
+    width: 33.333333%;
+    display: inline-block;
+}
+
+.form-row {
+  display: flex;
+  justify-content: space-between;
+}
+
+.form-row .col {
+  width: 49%;
+}
+
 #donors-list {
   list-style-type: none;
   column-count: 4;
@@ -706,6 +726,13 @@ input, textarea {
   width: 100%;
   margin-bottom: 1em;
   font: 15px/24px 'Mulish', sans-serif;
+}
+
+select {
+    padding: 1em;
+    border: 0px;
+    border-radius: 12px;
+    width: 100%;
 }
 
 label {
