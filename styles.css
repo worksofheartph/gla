@@ -75,7 +75,7 @@ h1 {
   padding: 0 20px;
   font-size: var(--h5);
   letter-spacing: 0.05em;
-  font-weight: 600;
+  font-weight: 700;
   margin: 0;
   padding: 0;
   color: var(--white);
@@ -725,6 +725,7 @@ footer {
   transform: translate(0, 60px);
   transition: all 0.5s cubic-bezier(0.77, 0.2, 0.05, 1);
   transition-property: top, opacity;
+  padding-top: 2em;
 }
 
 #contact .container-small {
