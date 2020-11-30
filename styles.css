@@ -357,6 +357,8 @@ header > nav > a:hover {
 
 .mobile-collapse {
   position: relative;
+  padding-bottom: 30px;
+  transition: all 1s ease;
 }
 
 .mobile-collapse:after {
@@ -378,6 +380,8 @@ header > nav > a:hover {
 .mobile-collapse.expanded:after {
     content: "-";
     background: var(--grey-dark);
+    left: 0;
+    bottom: 0px;
 }
 
 .mobile-collapse .fade {
