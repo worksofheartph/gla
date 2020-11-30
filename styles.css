@@ -355,6 +355,42 @@ header > nav > a:hover {
   padding: 2rem calc(8 / 48 * 100%);
 }
 
+.mobile-collapse {
+  position: relative;
+}
+
+.mobile-collapse:after {
+    display: none;
+    content: "+";
+    position: absolute;
+    bottom: 0;
+    right: 0;
+    background: var(--teal);
+    line-height: 28px;
+    width: 30px;
+    height: 30px;
+    text-align: center;
+    border-radius: 30px;
+    color: #fff;
+    font-weight: bold;
+}
+
+.mobile-collapse.toggled:after {
+    content: "-";
+    background: var(--grey-dark);
+}
+
+.fade {
+background: linear-gradient(180deg, rgba(255, 255, 255, 0.2) -20%, rgba(255, 255, 255, 1) 100%);
+    height: 60px;
+    margin-top: -67px !important;
+    position: absolute;
+    transition: all 1s ease;
+    opacity: 0;
+    bottom: 0;
+    width: 100%;
+  }
+
 .hero-section {
   background: var(--white);
   display: flex;
@@ -488,7 +524,7 @@ header > nav > a:hover {
   font-size: 18px;
   line-height: 28px;
   font-style: italic;
-  margin-bottom: 1.5em;
+  margin: 0 0 1.5em;
 }
 
 .testimonials > .author {
@@ -848,7 +884,20 @@ textarea {
 
   .course img {
     height: 250px;
-}
+  }
+
+  .mobile-collapse {
+    height: 350px;
+    overflow: hidden;
+  }
+
+  .mobile-collapse:after {
+    display: block;
+  }
+
+  .fade {
+    opacity: 1;
+  }
 }
 
 @media(max-width: 500px) {
