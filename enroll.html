@@ -1,8 +1,8 @@
 <html>
   <head>
     <title>Global Learning Access - Our Courses</title>
-     <meta name="viewport" content="width=device-width, initial-scale=1" />
-   <link rel="preconnect" href="https://fonts.gstatic.com">
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <link rel="preconnect" href="https://fonts.gstatic.com">
     <link href="https://fonts.googleapis.com/css2?family=Mulish:ital,wght@0,400;0,500;0,600;0,700;1,400;1,500;1,600;1,700&display=swap" rel="stylesheet">
     <link rel="shortcut icon" href="favicon.ico" type="image/x-icon">
     <link rel="icon" href="favicon.ico" type="image/x-icon">
@@ -11,12 +11,31 @@
   <body id="enroll">
     <header>
       <a href="index.html" class="logo"><img src="images/logo-white.svg"></a>
-      <nav>
+      <nav class="desktop">
         <a href="about.html">ABOUT</a>
         <a href="sponsor.html">SPONSOR</a>
-        <a href="contact.html">CONTACT</a>
+        <a href="#" class="contact-toggle">CONTACT</a>
         <a href="enroll.html" class="btn btn-enroll">ENROLL NOW</a>
       </nav>
+      <div id="menuToggle" class="mobile">
+        <input type="checkbox" />
+        MENU
+        <nav id="menu">
+          <a href="enroll.html" class="btn btn-enroll">ENROLL NOW</a>
+          <a href="index.html">Home</a>
+          <a href="about.html">About</a>
+          <a href="sponsor.html">Sponsor</a>
+          <h2>Get in Touch</h2>
+          <form action="https://formspree.io/f/meqpllan" method="POST">
+            <input type="text" name="name" placeholder="Name">
+            <input type="email" name="_replyto" placeholder="Email Address">
+            <textarea name="message" placeholder="Message"></textarea>
+            <button id="contact-submit" type="submit" class="btn btn-pink-solid">Send</button>
+          </form>
+          gertrude@GlobalLearningAccess.com<br/>
+          (510) 945-0030
+        </nav>
+      </div>
     </header>
     <section class="enroll-hero hero-section">
       <div class="title">
@@ -88,5 +107,32 @@
     <footer>
       Copyright   &#169; 2020 Global Learning Access
     </footer>
+    <div id="contact">
+      <div class="container-small">
+        <div>
+          <h2>Get in Touch</h2>
+          <form action="https://formspree.io/f/meqpllan" method="POST">
+            <input type="text" name="name" placeholder="Name">
+            <input type="email" name="_replyto" placeholder="Email Address">
+            <textarea name="message" placeholder="Message"></textarea>
+            <button id="contact-submit" type="submit" class="btn btn-pink-solid">Send</button>
+          </form>
+          gertrude@GlobalLearningAccess.com<br/>
+          (510) 945-0030
+        </div>
+        <div class="contact-image">
+          <img src="images/getintouch.svg" />
+        </div>
+      </div>
+    </div>
+    <script>
+    var contact = document.querySelector("#contact");
+    contact.classList.add("loaded");
+    document.querySelector(".contact-toggle").addEventListener("click", function(e) {
+    e.preventDefault();
+    contact.classList.toggle("toggled");
+        window.scrollTo({top: 0, behavior: 'smooth'});
+    });
+    </script>
   </body>
 </html>

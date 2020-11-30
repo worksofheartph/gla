@@ -11,12 +11,31 @@
   <body id="sponsor">
     <header>
       <a href="index.html" class="logo"><img src="images/logo-white.svg"></a>
-      <nav>
+      <nav class="desktop">
         <a href="about.html">ABOUT</a>
         <a href="sponsor.html">SPONSOR</a>
-        <a href="contact.html">CONTACT</a>
+        <a href="#" class="contact-toggle">CONTACT</a>
         <a href="enroll.html" class="btn btn-enroll">ENROLL NOW</a>
       </nav>
+       <div id="menuToggle" class="mobile">
+        <input type="checkbox" />
+        MENU
+        <nav id="menu">
+          <a href="enroll.html" class="btn btn-enroll">ENROLL NOW</a>
+          <a href="index.html">Home</a>
+          <a href="about.html">About</a>
+          <a href="sponsor.html">Sponsor</a>
+          <h2>Get in Touch</h2>
+          <form action="https://formspree.io/f/meqpllan" method="POST">
+            <input type="text" name="name" placeholder="Name">
+            <input type="email" name="_replyto" placeholder="Email Address">
+            <textarea name="message" placeholder="Message"></textarea>
+            <button id="contact-submit" type="submit" class="btn btn-pink-solid">Send</button>
+          </form>
+          gertrude@GlobalLearningAccess.com<br/>
+          (510) 945-0030
+        </nav>
+      </div>
     </header>
     <section class="sponsor-hero hero-section">
       <div class="title">
@@ -171,12 +190,39 @@
     <div class="stairs"><img src="images/stairs.svg"></div>
     <section class="testimonials">
       <blockquote>
-        "GLA's educational technology program  allowed me to make a big leap in my career. As the information technology officer of my  division at DepEd, I have used all that I’ve learned from GLA in 2013 and 2019. "
+        "GLA's educational technology program  allowed me to make a big leap in my career. As the information technology officer of my  division at DepEd, I have used all that I've learned from GLA in 2013 and 2019. "
       </blockquote>
       <strong class="author">Renato Fontanilla, Division Information Technology Officer</strong>
     </section>
     <footer>
       Copyright   &#169; 2020 Global Learning Access
     </footer>
+    <div id="contact">
+      <div class="container-small">
+        <div>
+          <h2>Get in Touch</h2>
+          <form action="https://formspree.io/f/meqpllan" method="POST">
+            <input type="text" name="name" placeholder="Name">
+            <input type="email" name="_replyto" placeholder="Email Address">
+            <textarea name="message" placeholder="Message"></textarea>
+            <button id="contact-submit" type="submit" class="btn btn-pink-solid">Send</button>
+          </form>
+          gertrude@GlobalLearningAccess.com<br/>
+          (510) 945-0030
+        </div>
+        <div class="contact-image">
+          <img src="images/getintouch.svg" />
+        </div>
+      </div>
+    </div>
+    <script>
+    var contact = document.querySelector("#contact");
+    contact.classList.add("loaded");
+    document.querySelector(".contact-toggle").addEventListener("click", function(e) {
+    e.preventDefault();
+    contact.classList.toggle("toggled");
+        window.scrollTo({top: 0, behavior: 'smooth'});
+    });
+    </script>
   </body>
 </html>

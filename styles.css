@@ -61,9 +61,7 @@ h1 {
   font-weight: 500;
 }
 
-.desktop {
-  display: inline-block;
-}
+
 
 .mobile {
   display: none;
@@ -76,13 +74,18 @@ h1 {
   /*position: relative;*/
   padding: 0 20px;
   font-size: var(--h5);
-  font-weight: 700;
+  letter-spacing: 0.;05em;
+  font-weight: 600;
   margin: 0;
   padding: 0;
+  color: var(--white);
+}
+
+#home #menuToggle {
   color: var(--black);
 }
 
-#menuToggle input {
+#menuToggle > input {
   display: block;
   width: 100%;
   height: 100%;
@@ -99,45 +102,45 @@ h1 {
 #menu {
   position: absolute;
   height: 100vh;
-  top: -1em;
-  left: -5vw;
+  overflow-y: auto;
+  top: 4em;
+  left: 0vw;
   opacity: 0;
-  background: var(--dark);
+  background: var(--grey-light);
   background-size: cover;
   background-repeat: no-repeat;
-  color: white;
+  color: var(--black);
   list-style-type: none;
   -webkit-font-smoothing: antialiased;
   transform-origin: 0% 0%;
-  transform: translate(-100%, 0);
+  transform: translate(0, -100%);
   transition: transform 0.5s cubic-bezier(0.77, 0.2, 0.05, 1);
-  padding: 8em 0em;
-  min-width: 350px;
+  padding: 3em calc(4 / 48 * 100%) 8em;
+  min-width: 100%;
+
 }
 
 
 #menu a {
-  color: var(--beige);
-  font-size: var(--h4);
-  border-bottom: 1px solid var(--pink);
+  color: var(--black);
+  font-size: 2em;
   text-decoration: none;
-  font-weight: normal;
   display: block;
-  line-height: 1.5em;
-  padding: 1em 3em;
+  line-height: 2em;
   margin: 0;
+  font-weight: 500;
 }
 
-.dark #menu a {
-  color: var(--dark);
-  border-bottom: 1px solid var(--dark);
+
+#menu h5 {
+  color: var(--black);
+  line-height: 2em;
+  margin-top: 1.5em;
+  font-weight: 700;
+  color: var(--pink);
 }
 
-#menu a:hover {
-  color: var(--yellow);
-}
-
-#menuToggle input:checked ~ #menu {
+#menuToggle > input:checked ~ #menu {
   transform: scale(1, 1);
   opacity: 1;
 }
@@ -147,7 +150,7 @@ h1 {
   font-weight: 600;
   text-decoration: none;
   line-height: 42px;
-  padding: 0 30px 0 20px;
+  padding: 10px 30px 10px 20px;
   color: var(--white);
   border: 1px solid var(--white);
   border-radius: 10px;
@@ -155,6 +158,7 @@ h1 {
   text-align: left;
   display: inline-block;
   width: auto;
+  font: inherit
 }
 
 .btn:before, #contact-submit:before {
@@ -170,7 +174,7 @@ h1 {
   color: var(--black);
 }
 
-.btn-enroll {
+nav .btn-enroll {
   background: transparent;
   color: var(--white);
   border-color: var(--white);
@@ -186,6 +190,16 @@ h1 {
   background: var(--white);
   color: var(--teal);
   border-color: var(--white);
+}
+
+#menu .btn-enroll {
+  border-radius: 15px;
+  font-size: 1em;
+  text-indent: -3px;
+  background: var(--teal);
+  color: var(--white);
+  margin-bottom: 1em;
+  padding: 8px 25px;
 }
 
 .btn-pink-solid {
@@ -308,6 +322,7 @@ header {
 
 header > .logo {
   flex: 1;
+  z-index: 9999;
 }
 
 header > nav {
@@ -373,6 +388,7 @@ header > nav > a:hover {
 
 .home-hero > .illust > img {
   margin-bottom: -50px;
+  max-width: 90%;
 }
 
 .about-hero {
@@ -430,14 +446,27 @@ header > nav > a:hover {
 
 .home-cta-left {
   flex: 1;
-  background: var(--teal) url(images/home-cta-left-bg.svg) no-repeat 10px bottom;
-  min-height: 15rem;
+  background-color: var(--teal);
+  background-image:url(images/home-cta-left-bg.svg);
+  background-repeat: no-repeat;
+  background-position: 10px bottom;
+  min-height: 10rem;
+  padding: 4rem 0;
 }
 
 .home-cta-right {
   flex: 1;
-  background: var(--pink) url(images/home-cta-right-bg.svg) no-repeat right calc(100% - 10px);
-  min-height: 15rem;
+  background-color: var(--pink);
+  background-image: url(images/home-cta-right-bg.svg);
+  background-repeat: no-repeat;
+  background-position: right calc(100% - 10px);
+  min-height: 10rem;
+  padding: 4rem 0;
+}
+
+.home-cta img {
+  max-width: 20%; 
+  margin-bottom: 1.5em; 
 }
 
 .home-courses {
@@ -638,6 +667,9 @@ footer {
   width: 100%;
   transform-origin: 0% 0%;
   transform: translate(0, -100%);
+}
+
+#contact.loaded {
   transition: all 0.5s cubic-bezier(0.77, 0.2, 0.05, 1);
 }
 
@@ -701,6 +733,10 @@ textarea {
     display: none;
   }
 
+  .container, .container-small {
+    padding: 5em calc(4 / 48 * 100%);
+  }
+
   .hero-section, .cta-block, .courses-block {
     display: block;
   }
@@ -709,12 +745,20 @@ textarea {
     margin: 0 auto 2em;
   }
 
+  .home-hero {
+    min-height: 0;
+  }
+
   .home-hero .title {
     margin-top: 3em;
   }
 
   .home-hero > .illust {
     text-align: center;
+  }
+
+  .hero-section > .title > h1 {
+    font-size: 8vw;
   }
 
   .hero-description {
@@ -735,14 +779,58 @@ textarea {
   #donors-list {
     column-count: 2;
   }
+
+  .home-cta > p, .home-cta > h3 {
+    width: 90%;
+  }
+
+  .home-cta-left, .home-cta-right {
+    background-image: none;
+    padding: 2rem 0;
+  }
+
+  .testimonials {
+    padding: 5rem 10%;
+  }
+
+  .about-hero, .enroll-hero, .sponsor-hero {
+    padding: 2rem calc(100% * 4 / 48) 1rem;
+  }
+
+}
+
+@media(max-width: 768px) {
+  .container, .container-small {
+    padding: 5em calc(2 / 48 * 100%) 2em !important;
+  }  
+
+  .sponsor-details img {
+    display: none;
+  }
+
+  .staff, .coach {
+    display: block;
+    width: 100%;
+  }
+
+  .staff img {
+    margin-bottom: 1em;
+  }
+
+  .course img {
+    height: 250px;
+}
 }
 
 @media(max-width: 500px) {
-  .container, .container-small {
-    padding: 5em calc(4 / 48 * 100%) !important;
-  }
 
   #donors-list {
     column-count: 1;
   }
+
+  .hero-section > .title > h1 {
+    font-size: 11vw;
+}
+
+
 }
