@@ -776,7 +776,7 @@ select {
     -webkit-appearance: none;
     -moz-appearance: none;
     appearance: none;
-    background: url(https://d1aupjwqrojm93.cloudfront.net/b8f00e3f-1514-4005-8015-40bdee9d39f9/images/chevron_right_48px.svg.png) 98% / 5% no-repeat #fff;
+    background: url(/images/chevron_right_48px.svg.png) 98% / 5% no-repeat #fff;
 }
 
 label {
