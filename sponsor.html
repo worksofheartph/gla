@@ -7,18 +7,18 @@
     <meta property="og:title" content="Global Learning Access - Support Filipino Teachers Today!" />
     <meta property="og:type" content="website" />
     <meta property="og:description" content="Educators around the world are facing emerging challenges that are now more emphasized due to COVID-19.  How can we help ensure that Filipino youth continue to thrive during these challenging times and beyond? " />
-    <meta property="og:image:secure_url" content="/images/sponsor-share.png" />
-    <meta property="og:image" content="/images/sponsor-share.png" />
+    <meta property="og:image:secure_url" content="https://globallearningaccess.com/images/sponsor-share.png" />
+    <meta property="og:image" content="https://globallearningaccess.com/images/sponsor-share.png" />
     <meta property="og:image:width" content="1200" />
     <meta property="og:image:height" content="630" />
     <meta property="og:site_name" content="Global Learning Access" />
     <!-- Global site tag (gtag.js) - Google Analytics -->
     <script async src="https://www.googletagmanager.com/gtag/js?id=G-HV9JNRF1NH"></script>
     <script>
-      window.dataLayer = window.dataLayer || [];
-      function gtag(){dataLayer.push(arguments);}
-      gtag('js', new Date());
-      gtag('config', 'G-HV9JNRF1NH');
+    window.dataLayer = window.dataLayer || [];
+    function gtag(){dataLayer.push(arguments);}
+    gtag('js', new Date());
+    gtag('config', 'G-HV9JNRF1NH');
     </script>
     <link rel="preconnect" href="https://fonts.gstatic.com">
     <link href="https://fonts.googleapis.com/css2?family=Mulish:ital,wght@0,400;0,500;0,600;0,700;1,400;1,500;1,600;1,700&display=swap" rel="stylesheet">
@@ -30,29 +30,29 @@
     <link rel="mask-icon" href="/images/safari-pinned-tab.svg" color="#5bbad5">
     <link rel="shortcut icon" href="/images/favicon.ico">
     <meta name="msapplication-TileColor" content="#da532c">
-    <meta name="msapplication-config" content="/images/browserconfig.xml">
+    <meta name="msapplication-config" content="{{ asset('/images/browserconfig.xml">
     <meta name="theme-color" content="#ffffff">
-    <link href="/styles.css" rel="stylesheet">
-
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/4.1.1/animate.min.css">
+    <link href="styles.css" rel="stylesheet">
   </head>
   <body id="sponsor">
     <header>
-      <a href="/" class="logo"><img src="/images/logo-white.svg"></a>
+      <a href="index.html" class="logo"><img src="images/logo-white.svg"></a>
       <nav class="desktop">
-        <a href="/about">ABOUT</a>
-        <a href="/sponsor">SPONSOR</a>
+        <a href="about.html">ABOUT</a>
+        <a href="sponsor.html">SPONSOR</a>
         <a href="#" class="contact-toggle">CONTACT</a>
-        <a href="/enroll" class="btn btn-enroll">ENROLL NOW</a>
+        <a href="enroll.html" class="btn btn-enroll">ENROLL NOW</a>
       </nav>
-       <div id="menuToggle" class="mobile">
+      <div id="menuToggle" class="mobile">
         <input type="checkbox" />
         MENU
         <nav id="menu">
-          <a href="/enroll" class="btn btn-enroll">ENROLL NOW</a>
+          <a href="enroll.html" class="btn btn-enroll">ENROLL NOW</a>
           <a href="/">Home</a>
-          <a href="/about">About</a>
-          <a href="/sponsor">Sponsor</a>
+          <a href="about.html">About</a>
+          <a href="sponsor.html">Sponsor</a>
           <h5>GET IN TOUCH</h5>
           <form action="https://formspree.io/f/meqpllan" method="POST">
             <input type="text" name="name" placeholder="Name">
@@ -82,10 +82,10 @@
     <div class="container-small">
       <div class="sponsor">
         <div class="sponsor-details">
-          <img src="/images/adopt-teacher.svg">
+          <img src="images/adopt-teacher.svg">
           <h2>Adopt-A-Teacher Program</h2>
           <p>Help equip and empower Filipino teachers for the next generation of Filipino students today! You can show support by sponsoring a teacher with a class voucher.</p>
-          <a href="https://globallearningaccess.apptitude.xyz/help-educate/" class="btn btn-pink-solid">VIEW VOUCHERS</a>
+          <a href="https://globallearningaccess.apptitude.xyz/help-educate/" class="btn btn-pink-solid">BUY VOUCHERS</a> <a href="#sponsor-box" class="btn btn-pink-solid">DONATE</a>
         </div>
         <div class="sponsor-meta">
           By sponsoring a teacher, you will:
@@ -95,7 +95,7 @@
             <li>Subsidize the professional development of Filipino teachers through GLA's CatalystPLUS Education Technology Certification Program.</li>
           </ul>
           <br/>
-          <h5>CHAMPION'S CIRCLE</h5>
+          <h4>CHAMPION'S CIRCLE</h4>
           Herald Uy, Kollab CEO & Chief Evangelist<br/>
           Jeffrey and Donna Hansen<br/>
           Alicia Fortaleza
@@ -103,7 +103,7 @@
       </div>
     </div>
     <div class="container-small">
-      <div class="sponsor">
+      <div id="sponsor-box" class="sponsor">
         <div class="sponsor-details">
           <h2>Donate</h2>
           <p>You can also help our Kababayan Teachers by donating an amount to GLA.</p>
@@ -114,6 +114,7 @@
               <div data-for="amount" class="col-lg-8">
                 <label for="amount">Select an amount</label><br/>
                 <select name="amount" data-form-field="select" required="required" id="amount">
+                  <!-- <option value="3">$3 for testing</option> -->
                   <option value="425">$425 for 1 teacher </option>
                   <option value="1275">$1,275 for 2 teachers</option>
                   <option value="2125">$2,125 for 3 teachers</option>
@@ -124,13 +125,12 @@
                 <label for="other_amount">Amount</label>
                 <input type="number" name="other_amount" placeholder="For other amounts only" max="" min="1" step="1" data-form-field="other_amount" value="" id="other_amount" disabled="">
               </div>
-<!--               <div>
+              <!-- <div>
                 <label>Your name</label>
                 <div class="form-row">
                   <div class="col">
                     <input type="text" name="first_name" placeholder="First Name" data-form-field="first_name" required="required" value="" id="first_name">
                   </div>
-
                   <div class="col">
                     <input type="text" name="last_name" placeholder="Last Name" data-form-field="last_name" required="required" value="" id="last_name">
                   </div>
@@ -212,14 +212,42 @@
         <li>Wilfredo & Maria Teresa Rivera</li>
       </ul>
     </div>
-    <div class="stairs"><img src="/images/stairs.svg"></div>
+    <div class="stairs"><img src="images/stairs.svg"></div>
     <section class="testimonials">
-      <blockquote>
-        "GLA's educational technology program  allowed me to make a big leap in my career. As the information technology officer of my  division at DepEd, I have used all that I've learned from GLA in 2013 and 2019. "
-      </blockquote>
-      <strong class="author">Renato Fontanilla, Division Information Technology Officer</strong>
+      <div class="testimonial">
+        <blockquote>
+          "GLA's educational technology program  allowed me to make a big leap in my career. As the information technology officer of my  division at DepEd, I have used all that I've learned from GLA in 2013 and 2019. "
+        </blockquote>
+        <strong class="author">Renato Fontanilla, Division Information Technology Officer</strong>
+      </div>
+      <div class="testimonial">
+        <blockquote>
+          "This training is very important and very useful. I learned a lot of things and tools to make learning fun and memorable to the students. They introduced tools that can motivate the students to make their work more creative and for them to be confident. "
+        </blockquote>
+        <strong class="author">Kim Tence Bario, Dumaguete City, Foundation University     </strong>
+      </div>
+      <div class="testimonial">
+        <blockquote>
+          "Being a member of the GLA team has become a life-changing experience for me because I learned many tools that I've shared with my students."
+        </blockquote>
+        <strong class="author">
+        Melody Belisario, Master Teacher II, Pangasinan National High School
+        </strong>
+      </div>
+      <div class="testimonial">
+        <blockquote>
+          "We need to develop the traditional way of teaching because we are already living in a fast-changing generation. GLA really gave me a lot of experiences that made me realize that I needed to modify the teaching strategies I am using."
+        </blockquote>
+        <strong class="author">Mark Anthony Reyes Rivera, Assistant Principal for Academics, St. Anne Academy - Piddig, Ilocos Norte
+        </strong>
+      </div>
     </section>
+    <div class="testimonials-pagination"></div>
     <footer>
+      <a href="https://www.facebook.com/Global-Learning-Access-103808181589588"><img src="images/fb-icon.svg"></a>
+      <a href="https://www.youtube.com/channel/UCt6iZtERjcapDE-atHq5POg"><img src="images/yt-icon.svg"></a>
+      <a href="https://www.linkedin.com/in/global-learning-access-a1590a200/"><img src="images/li-icon.svg"></a>
+      <br>
       Copyright   &#169; 2020 Global Learning Access
     </footer>
     <div id="contact">
@@ -236,131 +264,17 @@
           (510) 945-0030
         </div>
         <div class="contact-image">
-          <img src="/images/getintouch.svg" />
+          <img src="images/getintouch.svg" />
         </div>
       </div>
     </div>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/egjs-flicking/3.7.0/flicking.pkgd.min.js" integrity="sha512-mbhLkirG0mIzEEnDqIYocnlEpJJ7rucCjIyTsmiLyh/bSQjKNPbVMOiOu2Zku0l82Y5N/p12PUjywmAx98ajHA==" crossorigin="anonymous"></script>
+    <script src="js/main.js"></script>
     <script>
-      var contact = document.querySelector("#contact");
-      var mobileMenu = document.querySelector("#menuToggle input");
-      
-      document.querySelector(".contact-toggle").addEventListener("click", function(e) {
-        e.preventDefault();
-        contact.classList.toggle("toggled");
-        window.scrollTo({top: 0, behavior: 'smooth'});
-      });
-
-      var mobileMenuToggled = false;
-      mobileMenu.addEventListener("click", toggleMobileMenu);
-      mobileMenu.addEventListener("tap", toggleMobileMenu);
-      function toggleMobileMenu(e) {
-        mobileMenuToggled = !mobileMenuToggled;
-        document.body.style.overflowY = mobileMenuToggled ? "hidden" : "auto";
-      }
+    document.querySelector("#amount").addEventListener("change", function(e) {
+    document.querySelector("#other_amount").disabled = e.target.value !== "other_amount";
+    });
     </script>
-    <script>
-      document.querySelector("#amount").addEventListener("change", function(e) {
-          document.querySelector("#other_amount").disabled = e.target.value !== "other_amount";
-      });
-    </script>
-      <script src="https://checkout.magpie.im/v2/checkout.js"></script>
-    <script src="https://cdn.jsdelivr.net/npm/sweetalert2@10"></script>
-    <script>
-      let amount = 0;
-      const description = 'Your kind donation';
-      const name = 'Global Learning Access';
-      const icon = 'https://client-objects.s3-us-west-2.amazonaws.com/gla_logo_color.svg';
-      const currency = 'USD';
-      
-      let app = new MagpieCheckout({
-        key: 'pk_test_Taog2pfPZ8B6x6rjQ56lDg',
-        amount: amount,
-        icon: icon,
-        allowRememberMe: false,
-        bank: false,
-        billing: true,
-        payLabel: 'Donate',
-        token: function(token, args) {
-          Swal.fire({
-            title: 'Processing your donation',
-            allowOutsideClick: false,
-            allowEscapeKey: false,
-            allowEnterKey: false,
-            showConfirmButton: false,
-            willOpen: () => {
-              Swal.showLoading();
-            },
-            didDestroy: () => {
-            },
-            showClass: {
-              popup: 'animate__animated animate__fadeInUp'
-            },
-            hideClass: {
-              popup: 'animate__animated animate__fadeOutUp'
-            }
-          });
-          const data = {
-            token: token,
-            args: args,
-            amount: amount,
-            currency: currency,
-            description: description
-          };
-          const options = {
-            method: 'POST',
-            body: JSON.stringify(data),
-            headers: {
-              'Content-Type': 'application/json',
-              'Accept': 'application/json'
-            }
-          };
-          postCharge('/api/charges', options)
-            .then(response => {
-              Swal.fire({
-                title: 'Success',
-                icon: 'success',
-                html: 'Thanks for your donation!',
-                showClass: {
-                  popup: 'animate__animated animate__fadeInUp'
-                },
-                hideClass: {
-                  popup: 'animate__animated animate__fadeOutUp'
-                }
-              })
-              .then((result) => {
-                location.reload();
-              });
-              // console.log('Success');
-              // console.log(response);
-            })
-            .catch((error) => {
-              console.log('Error');
-              console.log(error); 
-            });
-        }
-      });
-
-      async function postCharge(url='',data={}) {
-        const response = await fetch(url, data);
-        return response.json();
-      }
-
-      document.getElementById('donate-form').addEventListener('submit', function(e) {
-        e.preventDefault();
-        amount = document.getElementById("amount").value;
-        let email = document.getElementById("email").value;
-        if (amount === 'other_amount') {
-          amount = document.getElementById("other_amount").value;
-        }
-        amount = Math.ceil(parseFloat(amount.replace(/[\,]/g,''))*100);
-        app.open({
-            amount: amount,
-            description: description,
-            name: name,
-            email: email,
-            currency: currency
-        });
-      });
-    </script>
+   
   </body>
 </html>

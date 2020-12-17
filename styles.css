@@ -522,7 +522,7 @@ background: linear-gradient(180deg, rgba(255, 255, 255, 0.2) -20%, rgba(255, 255
   background: var(--grey-light);
   padding: 5rem 20%;
   text-align: center;
-  height: 18rem;
+  height: 17rem;
 }
 
 .testimonial {
@@ -534,6 +534,7 @@ background: linear-gradient(180deg, rgba(255, 255, 255, 0.2) -20%, rgba(255, 255
   line-height: 28px;
   font-style: italic;
   margin: 0 0 1.5em;
+  padding: 0 5vw;
 }
 
 .testimonial > .author {
@@ -557,6 +558,11 @@ background: linear-gradient(180deg, rgba(255, 255, 255, 0.2) -20%, rgba(255, 255
   border-radius: 50%;
   background-color: var(--grey);
   margin: 0 0.2rem;
+  cursor: pointer;
+}
+
+.testimonials-pagination > .page:hover {
+  background-color: var(--pink-light);
 }
 
 .testimonials-pagination > .page.current {
@@ -568,6 +574,15 @@ footer {
   text-align: center;
   background: var(--pink);
   color: var(--white);
+}
+
+footer a {
+  margin: 0 2px;
+  transition: 0.1s all linear;
+}
+
+footer a:hover {
+  opacity: 0.8;
 }
 
 #about footer {
@@ -617,8 +632,48 @@ footer {
   margin: 0 auto;
 }
 
+.story-hero {
+  margin: 3em 0;
+}
+
+.story-hero > .title {
+  background: url(images/story-hero.svg) no-repeat center center;
+  padding: 2rem 0 3rem;
+  background-size: contain;
+  flex: 1;
+  align-self: center;
+  display: flex;
+  justify-content: flex-start;
+  color: var(--black);
+}
+
+.story-hero > .title > h1 {
+  font-size: 4vw;
+  margin: 0 auto;
+}
+
 #enroll .hero-description h4 {
   color: var(--purple);
+}
+
+#enroll-video {
+  margin:  7rem calc(8 / 48 * 100%);
+  padding-bottom: 30%;
+  position: relative;
+
+}
+
+#enroll-video iframe {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+}
+
+#catalyst-plus-icon {
+  width: 100px;
+  height: auto;
 }
 
 #sponsor header {
@@ -726,10 +781,12 @@ footer {
 
 .staff img {
   margin-right: 2em;
+  max-width: 140px;
 }
 
 .coach img {
   margin-right: 1em;
+  max-width: 50px;
 }
 
 .staff-info h4 {
@@ -782,7 +839,7 @@ footer {
 }
 
 input, textarea {
-  padding: 1em 0;
+  padding: 1em;
   text-indent: 1.5em;
   border: 0;
   border-radius: 12px;
@@ -916,7 +973,7 @@ textarea {
     display: none;
   }
 
-  .staff, .coach {
+  .staff {
     display: block;
     width: 100%;
   }
@@ -949,6 +1006,16 @@ textarea {
   .mobile-collapse.expanded .fade {
     display: none;
   }
+
+  #enroll-video {
+    margin:  5rem calc(4 / 48 * 100%);
+    padding-bottom: 50%;
+  }
+
+  .testimonials {
+  height: 24rem;
+}
+
 }
 
 @media(max-width: 500px) {
@@ -962,4 +1029,28 @@ textarea {
 }
 
 
+}
+
+.fa {
+  padding: 10px;
+  margin: 10px; 
+  font-size: 20px;
+  width: 40px;
+  /* text-align: center; */
+  text-decoration: none;
+  border-radius: 50%;
+}
+
+.fa:hover {
+  opacity: 0.7;
+}
+
+.fa-facebook {
+  background: #3B5998;
+  color: white;
+}
+
+.fa-youtube {
+  background: #bb0000;
+  color: white;
 }
