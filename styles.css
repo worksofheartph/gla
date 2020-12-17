@@ -244,6 +244,7 @@ nav .btn-enroll {
 .courses-block {
   display: flex;
   justify-content: space-between;
+  text-align: left;
 }
 
 .course {
@@ -511,7 +512,8 @@ background: linear-gradient(180deg, rgba(255, 255, 255, 0.2) -20%, rgba(255, 255
 
 .home-courses {
   background: var(--white);
-  padding: 7rem calc(100% * 4 / 48) 0;
+  padding: 3rem calc(100% * 4 / 48) 0;
+  text-align: center;
 }
 
 .home-courses > h2 {
@@ -522,7 +524,7 @@ background: linear-gradient(180deg, rgba(255, 255, 255, 0.2) -20%, rgba(255, 255
   background: var(--grey-light);
   padding: 5rem 20%;
   text-align: center;
-  height: 17rem;
+  height: 20rem;
 }
 
 .testimonial {
@@ -534,7 +536,7 @@ background: linear-gradient(180deg, rgba(255, 255, 255, 0.2) -20%, rgba(255, 255
   line-height: 28px;
   font-style: italic;
   margin: 0 0 1.5em;
-  padding: 0 5vw;
+  padding: 0 2vw;
 }
 
 .testimonial > .author {
@@ -1013,7 +1015,7 @@ textarea {
   }
 
   .testimonials {
-  height: 24rem;
+  height: 27rem;
 }
 
 }
